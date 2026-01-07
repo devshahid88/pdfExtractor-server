@@ -11,6 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/pdf", pdfRoutes);
+app.use("/uploads", express.static("uploads"));
 
 const PORT: number = Number(process.env.PORT) || 5000;
 
